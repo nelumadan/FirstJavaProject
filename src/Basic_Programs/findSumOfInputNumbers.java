@@ -5,6 +5,7 @@ public class findSumOfInputNumbers
 {
 	public static void main(String[] args) 
 	{
+		int i;
 		int sum = 0;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("How many numbers you want to enter");
@@ -13,19 +14,22 @@ public class findSumOfInputNumbers
 		int[] num = new int[n];
 		
 		System.out.println("Enter " +n+" numbers");
-		for(int i=0;i<num.length;i++)
+		for(i=0;i<num.length;i++)
 		{
 			num[i] = sc.nextInt();
 		}
+		
 		System.out.println("The numbers are");
-		for(int j=0;j<num.length;j++)
+		for(i=0;i<num.length;i++)
 		{
-			System.out.print(" " +num[j]);
+			System.out.print(" " +num[i]);
 		}
-		for(int k=0;k<num.length;k++)
+		
+		for(i=0;i<num.length;i++)
 		{
-			sum = sum + num[k];
+			sum = sum + num[i];
 		}
+		
 		System.out.println();
 		System.out.println("The sum of the numbers is: " +sum);
 	}

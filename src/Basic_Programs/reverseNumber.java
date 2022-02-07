@@ -23,6 +23,7 @@ public class reverseNumber
 //		System.out.println("Reversed number is :" +rev);
 		
 		
+		//StringBuilder sbl=new StringBuilder(String.valueOf(num));
 		StringBuilder sbl=new StringBuilder();//third method using stringBuilder class
 		sbl.append(num);
 		StringBuilder rev=sbl.reverse();

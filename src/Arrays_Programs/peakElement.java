@@ -24,8 +24,8 @@ public class peakElement
 
 	public static void main(String[] args) 
 	{
-		int arr1[] = {1,4,7,10,6,20,18};
-		int arr2[]= {9,6};
+		int arr1[] = {1,4,12,10,6,20,18};
+		int arr2[]= {9,23};
 		int arr3[]= {45};
 		System.out.println("The peak elements in arr1 are: ");
 		findPeak(arr1);

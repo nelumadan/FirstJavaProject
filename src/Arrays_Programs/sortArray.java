@@ -7,18 +7,18 @@ public class sortArray
 		int n=arr.length;
 		int temp=0;
 		
-		while(n>0)
+		
+		for(int i=0;i<n-1;i++)
 		{
-			for(int i=0;i<n-1;i++)
+			for(int j=0;j<n-1;j++)
 			{
-				if(arr[i]>arr[i+1])
+				if(arr[j]>arr[j+1])
 				{
-					temp=arr[i];
-					arr[i]=arr[i+1];
-					arr[i+1]=temp;
+					temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
 				}
 			}
-			n--;
 		}
 	}
 	
