@@ -9,7 +9,7 @@ public class arrayListDemo1_basicMethods
 	public static void main(String[] args) 
 	{
 //		ArrayList<Integer> al=new ArrayList<Integer>();//declare arraylist for integer type data
-//		ArrayList<String> al=new ArrayList<String>();//declare arraylist for integer type data
+//		ArrayList<String> al=new ArrayList<String>();//declare arraylist for string type data
 		
 		ArrayList al=new ArrayList();//decalre arraylist for heterogenous data
 		ArrayList duplicate=new ArrayList();

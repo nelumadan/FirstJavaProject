@@ -17,7 +17,7 @@ public class hashMapDemo1
 		
 		System.out.println("Hashmap: " +hm);
 		
-		hm.put(103, "Nancy");//if duplicate key entered vaue gets updated for that key
+		hm.put(103, "Nancy");//if duplicate key entered value gets updated for that key
 		System.out.println("Hashmap after adding duplicate key: " +hm);
 		
 		hm.put(106, "David");//can add duplicate value

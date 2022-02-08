@@ -2,8 +2,8 @@ package oops;
 
 public class StaticKeyword
 {
-	static int a;
-	int b;
+	static int a;//static variable
+	int b;//non static variable
 	
 	static void m1()//static method
 	{

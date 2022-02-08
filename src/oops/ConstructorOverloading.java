@@ -2,18 +2,18 @@ package oops;
 
 public class ConstructorOverloading
 {
-	int a=0;
-	int b=0;
-	double c=0;
+	int a;
+	int b;
+	double c;
 	
-	ConstructorOverloading()//1st
+	ConstructorOverloading()//1st called default constructor
 	{
 		a=10;
 		b=20;
 		c=30;
 	}
 	
-	ConstructorOverloading(int x,int y)//2nd
+	ConstructorOverloading(int x,int y)//2nd called parameterized constructor
 	{
 		a=x;
 		b=y;

@@ -1,35 +1,33 @@
 package oops;
 
-class A
+class Calculator_Parent
 {
 	int a;
 	int b;
-	public void display()
+	public void add(int a,int b)
 	{
-		System.out.println(a+b);
+		System.out.println("Addition= " +(a+b));
 	}
 }
 
-class B extends A
+class Calculator_Child extends Calculator_Parent
 {
 	int x;
 	int y;
-	public void show()
+	public void sub(int x,int y)
 	{
-		System.out.println(x+y);
+		System.out.println("Subtraction= " +(x-y));
 	}
 }
 
 public class SingleLevelInheritance
 {
-
 	public static void main(String[] args)
 	{
-		B bobj = new B();
+		Calculator_Child c1 = new Calculator_Child();
 		
-		bobj.a = 150;//you can access all variables and methods of class A from class B object because B extends A
-		bobj.b = 250;
-		bobj.display();
+		c1.add(25,20);//you can access all variables and methods of parent/super class from child/sub class object because child extends parent
+		c1.sub(25,20);
 	}
 
 }

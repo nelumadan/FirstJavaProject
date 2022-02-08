@@ -1,45 +1,41 @@
 package oops;
 
-class A1
-{
-	int a;
-	int b;
-	public void display()
+class Calc1
+{	
+	static int a;
+	static int b;
+	public void sum(int a,int b)
 	{
-		System.out.println(a+b);
+		System.out.println("Sum= " +(a+b));
 	}
 }
 
-class B1 extends A1
+class Calc2 extends Calc1
 {
-	int p;
-	int q;
-	public void show()
+	public void diff(int a,int b)
 	{
-		System.out.println(p+q);
+		System.out.println("Difference= " +(a-b));
 	}
 }
 
-class C1 extends B1
+class Calc3 extends Calc2
 {
-	int x;
-	int y;
-	public void sum()
+	public void prod(int a,int b)
 	{
-		System.out.println(x+y);
+		System.out.println("Product= " +(a*b));
 	}
 }
 public class MultiLevelInheritance
 {
 	public static void main(String[] args)
 	{
-		//can access all var's and methods of class A1 and B1 from class C1 object because B1 extends A1 and C1 extends B1 so ultimately C1 extends A1 & B1
-		C1 cobj = new C1();
-		cobj.a = 100;
-		cobj.b = 200;
-		cobj.display();
-		cobj.p = 300;
-		cobj.q = 400;
-		cobj.show();
+		//can access all var's and methods of class Calc1 and Clac2 from class Calc3 object
+		//because Calc2 extends Calc1 and Calc3 extends Calc2 so ultimately Calc3 extends Calc1 & Calc2
+		int a=25;
+		int b=20;
+		Calc3 obj = new Calc3();
+		obj.sum(a,b);
+		obj.diff(a,b);
+		obj.prod(a,b);
 	}
 }

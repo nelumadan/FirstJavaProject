@@ -1,4 +1,4 @@
-package Basic_Programs;
+package Arrays_Programs;
 import java.util.*;
 
 public class findSumOfInputNumbers 

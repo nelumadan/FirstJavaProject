@@ -10,6 +10,7 @@ public class exceptionHandling
 		
 		int i = 10;
 		System.out.println(i/0);//ArithmeticException(unchecked exception identified during runtime because of divide by zero)
+		//program will terminate because exception is not handled
 		
 		System.out.println("stopped");
 	}
