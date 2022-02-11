@@ -17,6 +17,7 @@ public class addStringInputs
 		{
 			words[i]=sc.nextLine();
 		}
+		
 		for(int j=0;j<words.length;j++)
 		{
 			sentence = sentence +" "+ words[j];

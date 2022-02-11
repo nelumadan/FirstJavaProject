@@ -6,25 +6,29 @@ public class firstUniqueCharacterIndex
 {
 	public static void main(String[] args) 
 	{
+		Scanner sc= new Scanner(System.in);
 		System.out.println("Enter a String\n");
-        Scanner sc= new Scanner(System.in);
         String s =sc.nextLine();
-        System.out.println("Original String: " + s);
-        System.out.println("Index of first unique character in the above string is : " + first_Uniq_Char(s));
-    }
-	
-    public static int first_Uniq_Char(String s) 
-    {
-        int[] freq = new int[256];
-        for (char c : s.toCharArray()) 
-        {
-            freq[c - 'a']++;
-        }
-        for (int i = 0; i < s.length(); i++) 
-        {
-            if (freq[s.charAt(i) - 'a'] == 1)
-                return i;
-        }
-        return -1;
+        
+        char[] string=s.toCharArray();
+        int[] freq = new int[s.length()];
+        
+        for(int i=0;i<string.length;i++)
+		{
+			int count=1;
+			for(int j=i+1;j<string.length;j++)
+			{
+				if(string[i]==string[j])
+				{
+					count++;
+					freq[j]=1;
+				}
+			}
+			if(string[i]!=' ' && freq[i]==0 && count==1)
+			{
+				System.out.print("First unique character "+string[i] +" is at index " +i);
+				break;
+			}
+		}
 	}
 }

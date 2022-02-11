@@ -10,7 +10,7 @@ public class printDuplicates
 	        //Converts given string into character array  
 	        char string[] = string1.toCharArray();  
 	          
-	        System.out.println("Duplicate characters in a given string: ");  
+	        System.out.println("Duplicate characters in the string: ");
 	        //Counts each character present in the string  
 	        for(int i = 0; i <string.length; i++)
 	        {  
@@ -24,9 +24,9 @@ public class printDuplicates
 	                    string[j] = '0';  
 	                }  
 	            }  
-	            //A character is considered as duplicate if count is greater than 1  
-	            if(count > 1 && string[i] != '0')  
-	                System.out.println(string[i]);  
+	            //A character is considered as duplicate if count is greater than 1 
+	            if(count > 1 && string[i] != '0')
+	                System.out.print(string[i] +" ");  
 	        }  
 	   }  
 }

@@ -18,8 +18,8 @@ public class printEvenOddNumbers
 			arr[i] = sc.nextInt();
 		}
 		
-		List<Integer> even = new ArrayList<Integer>();
-		List<Integer> odd = new ArrayList<Integer>();
+		ArrayList even = new ArrayList();
+		ArrayList odd = new ArrayList();
 		
 		for(int i=0;i<n;i++)//you can also say for(int value:arr)
 		{

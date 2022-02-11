@@ -4,14 +4,18 @@ public class countCharacterOccurence
 {
 	public static void main(String[] args) 
 	{
-		String ch="J";
-		String s1="Java Programming Java Oops";
-		int l1=s1.length();
+		String string="Java Programming Java Oops";
+		char ch='a';
+		int count=0;
 		
-		String s2=s1.replaceAll(ch, "");
-		int l2=s2.length();
+		char[] str=string.toCharArray();
 		
-		int count=l2-l1;
-		System.out.println(ch+ " occurs " +count+ " times in the string");
+		for(int i=0;i<str.length;i++)
+		{
+			if(str[i]==ch)
+				count++;
+		}
+		
+		System.out.println("The character " +ch+ " occurs " +count+ " times in the string.");
 	}
 }

@@ -9,6 +9,7 @@ public class palindromeString
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a string to check");
 		String string=sc.nextLine();
+		
 		String reverse="";
 		int length=string.length();
 		

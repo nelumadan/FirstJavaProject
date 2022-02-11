@@ -9,7 +9,8 @@ public class addCharacterInTheEnd
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter string");
 		String string = sc.nextLine();
-		String newString=string + " ";
-		System.out.println(newString);
+		
+		string=string + "d";
+		System.out.println(string);
 	}
 }

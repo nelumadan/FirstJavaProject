@@ -14,12 +14,12 @@ public class reverseEachWord
 		
 		String reverseString="";
 		
-		for(String w:words)
+		for(String word:words)
 		{
 			String reverseWord="";
-			for(int i=w.length()-1;i>=0;i--)
+			for(int i=word.length()-1;i>=0;i--)
 			{
-				reverseWord=reverseWord+w.charAt(i);
+				reverseWord=reverseWord+word.charAt(i);
 			}
 			reverseString=reverseString+reverseWord+" ";
 		}

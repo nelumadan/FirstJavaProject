@@ -4,35 +4,27 @@ import java.util.Arrays;
 
 public class removeDuplicates 
 {
-	static String removeDuplicate(char str[], int n)
-    {
-        // Used as index in the modified string
-        int index = 0;
- 
-       for(int i=0;i<n;i++)
-       {
-    	   int j;
-    	   for(j=0;j<i;j++)
-    	   {
-    		   if(str[i]==str[j])
-    		   {
-    			   break;
-    		   }
-    	   }
-    	   if(i==j)
-    	   {
-    		   str[index]=str[i];
-    	   }
-       }
-        return String.valueOf(Arrays.copyOf(str, index));
-    }
- 
-    // Driver code
     public static void main(String[] args)
     {
-        char str[] = "hello have a nice day".toCharArray();
-        int n = str.length;
-        System.out.println(removeDuplicate(str, n));
+        String str = "hello have a nice day";
+        char string[] = str.toCharArray();  
+        int count;
+        
+        //Counts each character present in the string  
+        for(int i = 0; i <string.length; i++)
+        {  
+            count = 1;  
+            for(int j = i+1; j <string.length; j++) 
+            {  
+                if(string[i] == string[j] && string[i] != ' ') 
+                {  
+                    count++;   
+                }  
+            }  
+            //A character is considered as duplicate if count is greater than 1  
+            if(count==1)
+                System.out.print(string[i]);  
+        }  
     }
 	
 }
