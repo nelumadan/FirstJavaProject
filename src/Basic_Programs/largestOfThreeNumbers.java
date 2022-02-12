@@ -3,6 +3,22 @@ import java.util.Scanner;
 
 public class largestOfThreeNumbers 
 {
+	public static int findLargestOfThreeNumbers(int num1,int num2,int num3)
+	{
+		int largest=0;
+//		if(num1>num2 && num1>num3)//first method
+//			largest=num1;
+//		else if(num2>num1 && num2>num3)
+//			largest=num2;
+//		else
+//			largest=num3;
+		
+		largest=num1>num2?num1:num2;//second method using ternary operator
+		largest=num3>largest?num3:largest;
+		
+		return largest;
+	}
+	
 	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
@@ -13,22 +29,6 @@ public class largestOfThreeNumbers
 		System.out.println("Enter the third number");
 		int num3 = sc.nextInt();
 		
-//		if(num1>num2 && num1>num3)//first method
-//		{
-//			System.out.println(num1 +" is the largest number");
-//		}
-//		else if(num2>num1 && num2>num3)
-//		{
-//			System.out.println(num2 +" is the largest number");
-//		}
-//		else
-//		{
-//			System.out.println(num3 +" is the largest number");
-//		}
-		
-		
-		int largest=num1>num2?num1:num2;//second method using ternary operator
-		largest=num3>largest?num3:largest;
-		System.out.println(largest +" is the largest number");
+		System.out.println("The largest of three numbers is: " +findLargestOfThreeNumbers(num1,num2,num3));
 	}
 }

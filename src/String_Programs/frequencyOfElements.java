@@ -1,27 +1,28 @@
 package String_Programs;
 
+import java.util.HashSet;
+
 public class frequencyOfElements 
 {
 
 	public static void main(String[] args) 
 	{
-		String[] str= {"java","c","python","java","c++","python","java"};
-		int freq[] = new int[str.length];
+		String[] string = {"java", "c", "java", "c++", "python", "java", "python", "c"};
+		HashSet<String> duplicate=new HashSet<String>();
+		int count=0;
 		
-		for(int i=0;i<str.length;i++)
+		for(int i=0;i<string.length;i++)
 		{
-			int count=1;
-			for(int j=i+1;j<str.length;j++)
+			count=1;
+			for(int j=i+1;j<string.length;j++)
 			{
-				if(str[i]==str[j])
+				if(string[i]==string[j])
 				{
 					count++;
-					freq[j]=1;
 				}
-				
 			}
-			if(freq[i]==0)
-		        System.out.println(str[i] + " - " + count);
+			if(duplicate.add(string[i])==true)
+				System.out.println(string[i] +"-"+ count);
 		}
 
 	}

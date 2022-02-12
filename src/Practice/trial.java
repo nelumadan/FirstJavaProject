@@ -18,10 +18,10 @@ public class trial
 				if(string[i]==string[j])
 				{
 					count++;
-					if(duplicate.add(string[i])==true)
-						System.out.println(string[i] +"-"+ count);
 				}
 			}
+			if(duplicate.add(string[i])==true && count>1)
+				System.out.println(string[i] +"-"+ count);
 		}
 	}
 }

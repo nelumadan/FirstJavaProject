@@ -2,18 +2,21 @@ package String_Programs;
 
 public class reverseString2 {
 
-	public static void main(String[] args) 
+	public static String reverseString(String str)
 	{
-		String string = "black box testing";
-		String reverse = "";
-		int n = string.length();
-		
-		for (int i=n-1;i>=0;i--)
+		String reverseString="";
+		for(int i=str.length()-1;i>=0;i--)
 		{
-			reverse=reverse + string.charAt(i);
+			reverseString=reverseString+str.charAt(i);
 		}
 		
-		System.out.println("String is :" +string);
-		System.out.println("Reverse string is :" +reverse);
+		return reverseString;
+	}
+	
+	public static void main(String[] args) 
+	{
+		String string="hello how are you";
+		System.out.println("The reverse string is: " +"\n" +reverseString(string));
+		
 	}
 }

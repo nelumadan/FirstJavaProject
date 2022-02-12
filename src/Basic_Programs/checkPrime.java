@@ -4,13 +4,9 @@ import java.util.Scanner;
 
 public class checkPrime 
 {
-	public static void main(String[] args) 
+	public static void checkIfPrime(int num)
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a number");
-		int num = sc.nextInt();
 		int count=0;
-		
 		if(num>1)
 		{
 			for(int i=1;i<=num;i++)
@@ -25,5 +21,13 @@ public class checkPrime
 		}
 		else
 			System.out.println("The number is not a prime number");
+	}
+	
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int num = sc.nextInt();
+		checkIfPrime(num);
 	}
 }

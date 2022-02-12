@@ -6,9 +6,9 @@ public class findDuplicateElement
 {
 	public static void main(String[] args) 
 	{
-		String[] string = {"java","c","python","java","c++","c","java","python","c#"};
-		int count;
-		int[] freq=new int[string.length];
+		String[] string = {"java", "c", "java", "c++", "python", "java", "python", "c"};
+		HashSet<String> duplicate=new HashSet<String>();
+		int count=0;
 		
 		for(int i=0;i<string.length;i++)
 		{
@@ -18,12 +18,10 @@ public class findDuplicateElement
 				if(string[i]==string[j])
 				{
 					count++;
-					freq[j]=1;
 				}
 			}
-			if(freq[i]==0 && count>1) 
-				System.out.println(string[i]);
-		}
-		
+			if(duplicate.add(string[i])==true && count>1)
+				System.out.println(string[i] +"-"+ count);
+		}	
 	}
 }

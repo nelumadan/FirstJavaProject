@@ -2,13 +2,10 @@ package Basic_Programs;
 
 import java.util.Scanner;
 
-public class countEvenOddDigits 
+public class countNumberOfEvenOddDigits 
 {
-	public static void main(String[] args) 
+	public static void countEvenOddDigits(int num)
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a number");
-		int num = sc.nextInt();
 		int even=0;
 		int odd=0;
 		
@@ -23,5 +20,13 @@ public class countEvenOddDigits
 		}
 		System.out.println("Number of even digits is :" +even);
 		System.out.println("Number of odd digits is :" +odd);
+	}
+	
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int num = sc.nextInt();
+		countEvenOddDigits(num);
 	}
 }

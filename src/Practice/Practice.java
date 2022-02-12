@@ -6,27 +6,20 @@ import java.util.Scanner;
 
 public class Practice 
 {
+	public static String reverseString(String str)
+	{
+		String reverseString="";
+		int start=0;
+		int end=str.length()-1;
+		int temp=0;
+		
+		return reverseString;
+	}
+	
 	public static void main(String[] args) 
 	{
-		String[] string = {"java", "c", "java", "c++", "python", "java", "python", "c"};
-		int count=0;
-		int freq[] = new int[string.length];
+		String string="hello how are you";
+		System.out.println("The reverse string is: " +"\n" +reverseString(string));
 		
-		
-		for(int i=0;i<string.length;i++)
-		{
-			count=1;
-			for(int j=i+1;j<string.length;j++)
-			{
-				if(string[i]==string[j])
-				{
-					count++;
-					freq[j]=1;
-				}
-			}
-			
-			if(freq[i]==0 && count>1)
-				System.out.println(string[i] +"-"+ count);
-		}
 	}
 }

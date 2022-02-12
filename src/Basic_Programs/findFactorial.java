@@ -1,21 +1,26 @@
 package Basic_Programs;
 
-import java.util.Scanner;
+import java.math.BigInteger;
 
 public class findFactorial 
 {
+	public static BigInteger factorial(int num)
+	{
+		BigInteger factorial = BigInteger.ONE;
+		
+		while(num>1)
+		{
+			factorial = factorial.multiply(BigInteger.valueOf(num));
+			num--;
+		}
+		return factorial;
+	}
+	
 	public static void main(String[] args)
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a number");
-		int number = sc.nextInt();
-		int factorial=1;
-		
-		while(number>1)
-		{
-			factorial=factorial*number;
-			number--;
-		}
-		System.out.println("The factorial of given number is :" +factorial);
+		int n=30;
+		BigInteger fact=factorial(n);
+		System.out.println("The factorial of is: ");
+		System.out.printf("%d", fact);
 	}
 }
