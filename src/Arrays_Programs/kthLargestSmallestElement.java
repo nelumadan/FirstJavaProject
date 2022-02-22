@@ -2,24 +2,43 @@ package Arrays_Programs;
 
 public class kthLargestSmallestElement 
 {
-	static void sort(int arr[])
+	static int kthSmallest(int arr[],int k)
 	{
 		int temp=0;
 		int n= arr.length;
 		
-		while (n>0)
+		for(int i=0;i<k;i++)
 		{
-			for(int i=0;i<n-1;i++)
+			for(int j=i+1;j<n;j++)
 			{
-				if(arr[i]>arr[i+1])
+				if(arr[i]>arr[j])
 				{
 					temp=arr[i];
-					arr[i]=arr[i+1];
-					arr[i+1]=temp;
+					arr[i]=arr[j];
+					arr[j]=temp;
 				}
 			}
-			n--;
 		}
+		return arr[k-1];
+	}
+	static int kthLargest(int arr[],int k)
+	{
+		int temp=0;
+		int n= arr.length;
+		
+		for(int i=0;i<k;i++)
+		{
+			for(int j=i+1;j<n;j++)
+			{
+				if(arr[i]<arr[j])
+				{
+					temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+		}
+		return arr[k-1];
 	}
 	
 	static void print(int arr[])
@@ -31,18 +50,12 @@ public class kthLargestSmallestElement
 	}
 	public static void main(String[] args) 
 	{
-		int[] arr = {2,4,5,1,67,90,100,10,3};
+		int[] arr = {2,4,5,1,67,90,100,10,3,12};
         int k = 5;
-        
-        System.out.println("Unsorted array:");
         print(arr);
         System.out.println();
-        System.out.println("Sorted array:");
-        sort(arr);
-        print(arr); 
-        System.out.println();
-        System.out.println("The " +k+"th smallest element is: " +arr[k-1]);
-        System.out.println("The " +k+"th largest element is: " +arr[arr.length-k]);
+        System.out.println("The " +k+"th smallest element is: "+kthSmallest(arr,k));
+        System.out.println("The " +k+"th largest element is: "+kthLargest(arr,k));
 	}
 }
 

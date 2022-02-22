@@ -20,7 +20,7 @@ public class findFactorial
 	{
 		int n=30;
 		BigInteger fact=factorial(n);
-		System.out.println("The factorial of is: ");
+		System.out.println("The factorial is: ");
 		System.out.printf("%d", fact);
 	}
 }
