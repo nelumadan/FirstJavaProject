@@ -4,13 +4,12 @@ class X
 {
 	public void show()
 	{
-		System.out.println("In class Abc");
+		System.out.println("In class X");
 	}
 }
 
 public class AnonymousClass 
 {
-
 	public static void main(String[] args) 
 	{
 		X obj = new X()
@@ -21,7 +20,5 @@ public class AnonymousClass
 							}
 						};
 						obj.show();
-
 	}
-
 }

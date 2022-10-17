@@ -5,18 +5,18 @@ public class minMaxElement
 	public static void main(String[] args) 
 	{
 		int arr[] = {2,4,33,7,9,10,1,22};
-		int min = arr[0];
-		int max = arr[0];
+		int min = Integer.MAX_VALUE;
+		int max = Integer.MIN_VALUE;
 		
-		for (int i=1;i<arr.length;i++)
+		for (int i:arr)
 		{
-			if(arr[i]<min)
+			if(i<min)
 			{
-				min=arr[i];
+				min=i;
 			}
-			if(arr[i]>max)
+			if(i>max)
 			{
-				max=arr[i];
+				max=i;
 			}
 		}
 		System.out.println("The minimum value is :" +min);

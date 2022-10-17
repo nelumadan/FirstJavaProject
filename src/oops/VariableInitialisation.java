@@ -34,20 +34,20 @@ public class VariableInitialisation
 	public static void main(String[] args)//main method
 	{
 		//Assigning values to class variables using object
-//		VariableInitialisation emp1 = new VariableInitialisation();
-//		emp1.empid = 100;
-//		emp1.empname = "Neelam";
-//		emp1.salary = 10000;
-//		emp1.deptno = 001;
-//		emp1.display();
+		VariableInitialisation emp1 = new VariableInitialisation();
+		emp1.empid = 100;
+		emp1.empname = "Neelam";
+		emp1.salary = 10000;
+		emp1.deptno = 001;
+		emp1.display();
 		
 		//Assigning values to class variables using constructor variableInitialisation()
 //		VariableInitialisation emp2 = new VariableInitialisation(200,"Anil",20000,002);
 //		emp2.display();
 		
 		//Assigning values to class variables using method setData()
-		VariableInitialisation emp3 = new VariableInitialisation();
-		emp3.setData(300, "Anshul", 5000, 003);
-		emp3.display();
+//		VariableInitialisation emp3 = new VariableInitialisation();
+//		emp3.setData(300, "Anshul", 5000, 003);
+//		emp3.display();
 	}
 }

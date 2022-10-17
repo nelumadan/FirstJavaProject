@@ -25,23 +25,14 @@ class Pencil extends Writer
 	}
 }
 
-class Kit
-{
-	public void doSomething(Writer p)
-	{
-		p.write();
-	}
-}
-
 public class AbstractDemo 
 {
 	public static void main(String[] args) 
 	{
-		Kit k = new Kit();
 		Pen p = new Pen();
-		Pencil pc = new Pencil();
+		p.write();
 		
-		k.doSomething(p);
-		k.doSomething(pc);
+		Pencil pc = new Pencil();
+		pc.write();
 	}
 }

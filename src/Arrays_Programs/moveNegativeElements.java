@@ -5,7 +5,7 @@ public class moveNegativeElements
 	public static void main(String[] args) 
 	{
 		int arr[]= {-1,3,-5,4,-6,-7,2,8,-3,-5,2,6};
-		int n=arr.length;
+		int n=arr.length-1;
 		int i=0;
 		int temp=0;
 		
@@ -14,8 +14,8 @@ public class moveNegativeElements
 			if(arr[i]<0)
 			{
 				temp=arr[i];
-				arr[i]=arr[n-1];
-				arr[n-1]=temp;
+				arr[i]=arr[n];
+				arr[n]=temp;
 				n--;
 			}
 			else i++;

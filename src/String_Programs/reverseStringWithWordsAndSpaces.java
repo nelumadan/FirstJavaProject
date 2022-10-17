@@ -26,11 +26,9 @@ public class reverseStringWithWordsAndSpaces
 				reverseWord=reverseWord+word.charAt(i);
 			}
 			reverseString=reverseString+reverseWord+" ";
-			
 		}
 		
 		System.out.println(reverseString);
-		
 		
 	}
 }

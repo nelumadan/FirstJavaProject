@@ -15,7 +15,7 @@ public class findDuplicateElement
 			count=1;
 			for(int j=i+1;j<string.length;j++)
 			{
-				if(string[i]==string[j])
+				if(string[i].equals(string[j]))
 				{
 					count++;
 				}

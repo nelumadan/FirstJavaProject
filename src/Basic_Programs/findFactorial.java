@@ -18,9 +18,8 @@ public class findFactorial
 	
 	public static void main(String[] args)
 	{
-		int n=30;
-		BigInteger fact=factorial(n);
+		int n=10;
 		System.out.println("The factorial is: ");
-		System.out.printf("%d", fact);
+		System.out.printf("%d", factorial(n));
 	}
 }

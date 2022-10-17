@@ -18,7 +18,7 @@ public class convertArrayListToArray
 		System.out.println("--------------------");
 		System.out.println("Elements from array");
 		Object[] arr = al.toArray();//have to create array of objects because arraylist is a list of objects
-		for(Object elements : arr)
-			System.out.print(elements + " ");
+		for(Object element : arr)
+			System.out.print(element + " ");
 	}
 }

@@ -5,11 +5,10 @@ public class kthLargestSmallestElement
 	static int kthSmallest(int arr[],int k)
 	{
 		int temp=0;
-		int n= arr.length;
 		
 		for(int i=0;i<k;i++)
 		{
-			for(int j=i+1;j<n;j++)
+			for(int j=i+1;j<arr.length;j++)
 			{
 				if(arr[i]>arr[j])
 				{
@@ -24,11 +23,10 @@ public class kthLargestSmallestElement
 	static int kthLargest(int arr[],int k)
 	{
 		int temp=0;
-		int n= arr.length;
 		
 		for(int i=0;i<k;i++)
 		{
-			for(int j=i+1;j<n;j++)
+			for(int j=i+1;j<arr.length;j++)
 			{
 				if(arr[i]<arr[j])
 				{

@@ -1,5 +1,6 @@
 package String_Programs;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class firstUniqueCharacterIndex 
@@ -11,7 +12,7 @@ public class firstUniqueCharacterIndex
         String s =sc.nextLine();
         
         char[] string=s.toCharArray();
-        int[] freq = new int[s.length()];
+        HashSet<Character> hs = new HashSet<Character>();
         
         for(int i=0;i<string.length;i++)
 		{
@@ -21,10 +22,9 @@ public class firstUniqueCharacterIndex
 				if(string[i]==string[j])
 				{
 					count++;
-					freq[j]=1;
 				}
 			}
-			if(string[i]!=' ' && freq[i]==0 && count==1)
+			if(string[i]!=' ' && hs.add(string[i])==true && count==1)
 			{
 				System.out.print("First unique character "+string[i] +" is at index " +i);
 				break;

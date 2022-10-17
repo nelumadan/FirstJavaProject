@@ -4,17 +4,19 @@ import java.util.Scanner;
 
 public class printFibonacciSeries 
 {
-	public static void printFibonacci(int num)
+	public static void printFibonacci(int n)
 	{
-		int n1=0,n2=1,sum=0;
-		System.out.print(n1+" "+n2);
-		
-		for(int i=2;i<num;i++)
+		int num1=0;
+		int num2=1;
+
+		System.out.print(num1 +" " +num2);
+		while(n>2)
 		{
-			sum=n1+n2;
-			System.out.print(" " +sum);
-			n1=n2;
-			n2=sum;
+			int num3=num1+num2;
+			System.out.print(" " +num3);
+			num1=num2;
+			num2=num3;
+			n--;
 		}
 	}
 	
@@ -22,8 +24,8 @@ public class printFibonacciSeries
 	{
 		Scanner sc=new Scanner(System.in);
 		System.out.println("How many numbers you want to print in the series?");
-		int num=sc.nextInt();
+		int n=sc.nextInt();
 		
-		printFibonacci(num);
+		printFibonacci(n);
 	}
 }

@@ -1,13 +1,14 @@
 package Arrays_Programs;
 
-public class reverseArray 
+import org.testng.annotations.Test;
+
+public class ReverseArray 
 {
-	static void reverse(int arr[])
+	static void reverse(int[] arr)
 	{
 		int start=0;
 		int end=arr.length-1;
 		int temp=0;
-		
 		while(start<end)
 		{
 			temp=arr[start];
@@ -18,22 +19,19 @@ public class reverseArray
 		}
 	}
 	
-	static void print(int arr[])
+	static void print(int[] arr)
 	{
-		for(int i=0;i<arr.length;i++)
+		for (int i=0;i<arr.length;i++)
 		{
 			System.out.print(arr[i] +" ");
 		}
 	}
 	
-	public static void main(String[] args) 
+	@Test
+	public void array()
 	{
-		int arr[]= {3,6,9,12,15,18,21,24};
-		System.out.println("The list before reverse is: ");
-		print(arr);
+		int[] arr= {2,3,4,5,6,7,8,9,10,11,12};
 		reverse(arr);
-		System.out.println();
-		System.out.println("The list after reverse is: ");
 		print(arr);
 	}
 }

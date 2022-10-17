@@ -29,7 +29,7 @@ public class hashMapDemo1
 		System.out.println("Hashmap after removing 106 pair: " +hm);
 		
 		System.out.println("Hashmap contains key 102: " +hm.containsKey(102));//will return true if key 102 is present
-		System.out.println("Hashmap contains key 106: " +hm.containsKey(106));//will return because 106 is removed
+		System.out.println("Hashmap contains key 106: " +hm.containsKey(106));//will return false because 106 is removed
 		
 		System.out.println("Hashmap contains value Nancy: " +hm.containsValue("Nancy"));//will return true if value Nancy is present
 		System.out.println("Hashmap contains value Joseph: " +hm.containsValue("Joseph"));//will return false because Joseph is not there

@@ -18,7 +18,7 @@ public class VarargsDemo
 	public static void main(String[] args) 
 	{
 		Calc obj = new Calc();
-		int result=obj.add(4,5,6,7,8);//you can send any number of arguments
+		int result=obj.add(4,5,6,7,8,10);//you can send any number of arguments
 		System.out.println(result);
 	}
 }

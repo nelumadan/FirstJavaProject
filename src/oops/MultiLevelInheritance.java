@@ -29,7 +29,7 @@ public class MultiLevelInheritance
 {
 	public static void main(String[] args)
 	{
-		//can access all var's and methods of class Calc1 and Clac2 from class Calc3 object
+		//can access all var's and methods of class Calc1 and Calc2 from class Calc3 object
 		//because Calc2 extends Calc1 and Calc3 extends Calc2 so ultimately Calc3 extends Calc1 & Calc2
 		int a=25;
 		int b=20;

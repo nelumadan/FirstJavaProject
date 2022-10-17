@@ -18,9 +18,9 @@ public class addStringInputs
 			words[i]=sc.nextLine();
 		}
 		
-		for(int j=0;j<words.length;j++)
+		for(String w:words)
 		{
-			sentence = sentence +" "+ words[j];
+			sentence = sentence +" "+ w;
 		}
 		System.out.println(sentence.toUpperCase());
 	}

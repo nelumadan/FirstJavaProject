@@ -29,15 +29,9 @@ public class printEvenOddNumbers
 				odd.add(arr[i]);//odd.add(value)
 		}
 		System.out.println("Even numbers are:");
-        for (int i = 0; i < even.size(); i++) 
-        {
-            System.out.print(even.get(i) + " ");
-        }
+		System.out.println(even);
         System.out.println();
-        System.out.println("Odd numbers are:");
-        for (int j = 0; j < odd.size(); j++) 
-        {
-            System.out.print(odd.get(j) + " ");
-        }
+        System.out.println("Odd numbers are:");       
+        System.out.println(odd);
 	}
 }

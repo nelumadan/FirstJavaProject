@@ -8,6 +8,7 @@ public class reverseString4
 		StringBuffer sb = new StringBuffer(string);
 		
 		System.out.println("The string is : " +string);
-		System.out.println("Reverse string is :" +sb.reverse());
+		String reverse=sb.reverse().toString();
+		System.out.println("Reverse string is :" +reverse);
 	}
 }

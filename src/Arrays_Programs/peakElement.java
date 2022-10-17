@@ -1,38 +1,39 @@
 package Arrays_Programs;
 
+import java.util.ArrayList;
+
+import org.testng.annotations.Test;
+
 public class peakElement 
 {
-	static void findPeak(int arr[])
+	public ArrayList<Integer> findPeak(int[] arr)	
 	{
-		int n=arr.length;
+		ArrayList<Integer> peakElements= new ArrayList<Integer>();
 		
-		if(n==1)
-			System.out.println(arr[0]);
-		if(arr[0]>=arr[1])
-			System.out.println(arr[0]);
-		if(arr[n-1]>=arr[n-2])
-			System.out.println(arr[n-1]);
-		
-		{
-		for(int i=1;i<n-1;i++)
+		int n=arr.length-1;
+		if(arr.length==1)
+			peakElements.add(arr[0]);
+		if(arr[0]>arr[1])
+			peakElements.add(arr[0]);
+		if(arr[n]>arr[n-1])
+			peakElements.add(arr[n]);
+		for(int i=1;i<n;i++)
 		{
 			if(arr[i]>arr[i-1] && arr[i]>arr[i+1])
-				System.out.print(arr[i] +" ");
+				peakElements.add(arr[i]);
 		}
-		}
+		return peakElements;
 	}
-
-	public static void main(String[] args) 
+	
+	public void print(int[] arr)
 	{
-		int arr1[] = {1,4,12,10,6,20,18};
-		int arr2[]= {9,23};
-		int arr3[]= {45};
-		System.out.println("The peak elements in arr1 are: ");
-		findPeak(arr1);
-		System.out.println();
-		System.out.println("The peak elements in arr2 are: ");
-		findPeak(arr2);
-		System.out.println("The peak elements in arr3 are: ");
-		findPeak(arr3);
+		for(int num:arr)
+			System.out.print(num +" ");
+	}
+	@Test
+	public void test()
+	{
+		int[] arr= {3,67,23,11,4,90,2,35,56,45,25};
+		System.out.println(findPeak(arr));
 	}
 }

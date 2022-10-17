@@ -4,7 +4,6 @@ import java.util.LinkedList;
 
 public class linkedListDemo1 
 {
-	
 	public static void main(String[] args) 
 	{
 		LinkedList l = new LinkedList();//declare linkedlist for storing heterogenous data
